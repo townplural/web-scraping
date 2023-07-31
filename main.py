@@ -83,7 +83,7 @@ for vacancy in vacancies_list:
     django_pattern = re.findall('Flask', vacancies_description)
     sql_pattern = re.findall('[SQL|sql]{3}', vacancies_description)
 
-    print(dict)
+    # print(dict)
 
     if (flask_pattern and django_pattern) or sql_pattern:
         dict = {
@@ -97,8 +97,10 @@ for vacancy in vacancies_list:
 
 
 
-pprint(parsed_data)
+# pprint(parsed_data)
 
-for vacancy_info in parsed_data:
-    with open ('parsed_data', 'w') as f:
-        json.dump(vacancy_info, f)
+# for vacancy_info in parsed_data:
+with open ('parsed_data.json', 'w') as f:
+    json.dump(parsed_data, f)
+
+# pprint(')')

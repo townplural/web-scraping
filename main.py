@@ -100,7 +100,8 @@ for vacancy in vacancies_list:
 # pprint(parsed_data)
 
 # for vacancy_info in parsed_data:
-with open ('parsed_data.json', 'w') as f:
-    json.dump(parsed_data, f)
+with open ('parsed_data.json', 'w', encoding='utf-8') as file:
+    json.dump(parsed_data, file, ensure_ascii=False)
 
-# pprint(')')
+
+pprint(')')
